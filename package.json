@@ -3,12 +3,24 @@
   "version": "1.0.0",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "build": {
+    "appId": "com.screensaver_generator",
+    "productName": "Screensaver Generator",
+    "win": {
+      "target": "nsis",
+      "icon": "assets/icon.ico"
+    }
   },
   "author": "",
   "license": "ISC",
   "description": "",
   "devDependencies": {
-    "electron": "^35.1.5"
+    "electron": "^35.1.5",
+    "electron-builder": "^26.0.12"
   }
 }
